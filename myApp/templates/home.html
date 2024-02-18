@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>HOME PAGE</h1>
+<h3>Customers list:</h3>
+<ul>
+    {% for company in company_list %}
+        <li>{{ company.name }}</li>
+    {% endfor %}
+</ul>
+<p>API root <a href="/api/">here</a></p>
+<p>Admin site <a href="/admin/">here</a></p>
+<p>Form view <a href="{% url 'form-view' %}">form is here</a></p>
+{% endblock %}
+
+
+
+<!--<h2>Hello company - {Company.name}</h2>-->
+
+<!--<form action="" method="post">-->
+<!--    {% csrf_token %}-->
+<!--    {{ form }}-->
+<!--    <input type="submit" value="submit">-->
+<!--</form>-->
